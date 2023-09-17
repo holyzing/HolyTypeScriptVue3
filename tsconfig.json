@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
@@ -18,8 +18,9 @@
     // "types": ["vite/client", "element-plus/global", "unplugin-icons/types/vue"],
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "allowSyntheticDefaultImports": true /* 允许默认导入 */,
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */
-    // "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "noEmit": true /* 不生成编译文件 */,
+    "allowImportingTsExtensions": true
   },
   "ts-node": { "esm": true },
   "include": ["src/**/*.ts", "src/**/*.vue", "src/types/**/*.d.ts"],

@@ -2,14 +2,11 @@
   "name": "hello-ts",
   "private": true,
   "version": "0.0.1",
-
   "scripts": {
     "dev": "vite serve --mode development",
     "build:prod": "vite build --base=/static/ --mode production &&vue-tsc --noEmit",
     "prepare": "",
-
     "//": "husky install",
-
     "lint:eslint": "eslint  --fix --ext .ts,.js,.vue ./src ",
     "lint:prettier": "prettier --write \"**/*.{js,cjs,ts,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint  \"**/*.{css,scss,vue}\" --fix",
@@ -41,5 +38,13 @@
     "*.md": [
       "prettier --write"
     ]
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@types/core-js": "^2.5.6",
+    "core-js": "^3.32.2",
+    "moment": "^2.29.4"
   }
 }
