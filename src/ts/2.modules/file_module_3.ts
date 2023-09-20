@@ -20,11 +20,11 @@ actually does two things:
 
     Imports the type information of the foo module.
     Specifies a runtime dependency on the foo module.
-    
-    You can pick and choose so that only the type information is loaded and no runtime dependency occurs. 
+
+    You can pick and choose so that only the type information is loaded and no runtime dependency occurs.
     Before continuing you might want to recap the declaration spaces section of the book.
 
-    If you do not use the imported name in the variable declaration space then the import is completely removed from the generated JavaScript. 
+    If you do not use the imported name in the variable declaration space then the import is completely removed from the generated JavaScript.
     This is best explained with examples. Once you understand this we will present you with use cases.
 */
 
@@ -108,13 +108,13 @@ actually does two things:
  * const ensureImport: any = foo && bar && bas;
  */
 
-Promise.resolve().then(() =>
-  import("moment")
-    .then((moment) => {
-      const time = moment().format();
-      console.log(time);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-);
+// Promise.resolve().then(() =>
+//   import("moment")
+//     .then((moment) => {
+//       const time = moment().format();
+//       console.log(time);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     })
+// );
