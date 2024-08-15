@@ -1,0 +1,52 @@
+{
+  "name": "hello-ts",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./src/main.ts",
+  "scripts": {
+    "dev": "vite serve --mode development",
+    "build:prod": "vite build --base=/static/ --mode production &&vue-tsc --noEmit",
+    "prepare": "node --version && npm --version && pnpm --version && tsc --version",
+    "lint:eslint": "eslint  --fix --ext .ts,.js,.vue ./src ",
+    "lint:prettier": "prettier --write \"**/*.{js,cjs,ts,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint  \"**/*.{css,scss,vue}\" --fix",
+    "lint:lint-staged": "lint-staged",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{cjs,json}": [
+      "prettier --write"
+    ],
+    "*.{vue,html}": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@types/core-js": "^2.5.6",
+    "@types/node": "^20.6.3",
+    "core-js": "^3.32.2",
+    "moment": "^2.29.4"
+  }
+}
