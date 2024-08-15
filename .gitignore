@@ -1,0 +1,50 @@
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# ide
+.vscode/*
+.idea
+
+# OS
+tmp/
+temp/
+# windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# mac
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+
+# Node
+node_modules
+dist/
+build/
+out/
+target/
+
+# python
+__pycache__/
+*.py[cod]
+
+# java
+*.class
+*.jar
+*.war
+*.ear
+
+# logs
+logs
+*.log
+
+# go
+*.exe
+*.exe~
+__debug_bin*
